@@ -1,0 +1,26 @@
+﻿<form [formGroup]="configureForm" (ngSubmit)="onSubmit()">
+   
+  <div>
+    <label>GitHub Username:</label>
+    <input type="text" formControlName="username" />
+  </div>
+
+  <div>
+    <label>GitHub Password:</label>
+    <input type="password" formControlName="password" />
+  </div>
+
+  <div>
+    <label>GitHub URL:</label>
+    <input type="text" formControlName="url" />
+  </div>
+
+  <div>
+    <label>Repository Name:</label>
+    <input type="text" formControlName="repoName" />
+  </div>
+
+  <div>
+    <button type="submit" [disabled]="!configureForm.valid">Submit</button>
+  </div>
+</form>
